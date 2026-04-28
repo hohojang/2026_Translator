@@ -1,0 +1,4 @@
+customtkinter==5.2.2
+deep-translator==1.11.4
+beautifulsoup4==4.14.3
+requests==2.33.1
