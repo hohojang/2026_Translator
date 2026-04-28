@@ -10,15 +10,18 @@ Python과 customtkinter로 만든 현대적인 GUI 번역 프로그램입니다.
 - ⚡ **빠른 번역**: Google 번역 API 기반 고품질 번역
 - 📋 **복사 기능**: 번역 결과를 한 번의 클릭으로 복사
 - 🗑️ **초기화 기능**: 입력/결과 영역을 쉽게 초기화
+- 📱 **웹 버전**: 모바일/아이폰에서도 사용 가능
 
-## 🚀 설치 방법
+## 🚀 설치 및 실행 방법
 
-### 소스 코드에서 실행
+### 데스크톱 버전 (Windows)
+
+#### 소스 코드에서 실행
 
 1. **저장소 클론**
 ```bash
-git clone https://github.com/yourusername/google-translator.git
-cd google-translator
+git clone https://github.com/hohojang/2026_Translator.git
+cd 2026_Translator
 ```
 
 2. **의존성 설치**
@@ -31,23 +34,89 @@ pip install -r requirements.txt
 python translator.py
 ```
 
-### EXE 파일로 실행 (Windows)
+#### EXE 파일로 실행 (Windows)
 
-[Release 페이지](https://github.com/yourusername/google-translator/releases)에서 `translator.exe`를 다운로드하여 실행하면 됩니다.
+[Release 페이지](https://github.com/hohojang/2026_Translator/releases/tag/v1.0)에서 `Google_Translator_v1.0.zip`를 다운로드하여 실행하면 됩니다.
+
+### 🌐 웹 버전 (모든 기기)
+
+웹 버전은 Python이 설치된 환경에서 실행 가능하며, 브라우저를 통해 모든 기기에서 사용 가능합니다.
+
+#### 웹 버전 실행
+
+```bash
+# 저장소 클론 후
+python web_translator.py
+```
+
+#### 웹 브라우저에서 접속
+- 로컬: http://127.0.0.1:5000
+- 네트워크: http://[컴퓨터IP]:5000
+
+#### 아이폰/모바일에서 사용
+1. 컴퓨터에서 웹 서버 실행 (`python web_translator.py`)
+2. 같은 Wi-Fi 네트워크에서 아이폰 브라우저로 접속
+3. 컴퓨터 IP 주소와 포트 5000으로 접속 (예: `http://192.168.1.100:5000`)
 
 ## 📋 요구사항
 
-- Python 3.10 이상
-- Windows / macOS / Linux
+- **데스크톱 버전**: Python 3.10 이상, Windows 10+
+- **웹 버전**: Python 3.10 이상, 모든 OS (브라우저만 있으면 됨)
 
 ## 📦 주요 라이브러리
 
-- **customtkinter** - 현대적 GUI
+- **customtkinter** - 현대적 GUI (데스크톱)
 - **deep-translator** - Google 번역 API
+- **flask** - 웹 프레임워크 (웹 버전)
 - **requests** - HTTP 요청
 - **beautifulsoup4** - HTML 파싱
 
 ## 🎯 사용 방법
+
+### 데스크톱 버전
+1. **원문 입력**: 상단 입력 창에 번역할 텍스트를 입력합니다.
+2. **언어 선택**:
+   - "한국어 → 영어" 또는 "영어 → 한국어" 버튼을 클릭합니다.
+   - 둘 다 클릭하여 교차 검증할 수 있습니다.
+3. **결과 확인**: 하단 결과 창에서 번역 결과를 확인합니다.
+4. **복사**: "📋 결과 복사" 버튼으로 결과를 클립보드에 복사합니다.
+
+### 웹 버전
+1. **브라우저에서 접속**: http://127.0.0.1:5000
+2. **텍스트 입력**: 큰 입력 박스에 번역할 내용 입력
+3. **번역 버튼 클릭**: 원하는 번역 방향 선택
+4. **결과 확인**: 실시간으로 번역 결과 표시
+5. **단축키**: Ctrl+Enter (한→영), Shift+Enter (영→한)
+
+## ⚙️ 시스템 요구사항
+
+- **OS**: Windows 10 이상 (데스크톱), 모든 OS (웹)
+- **메모리**: 최소 200MB
+- **인터넷**: Google 번역 API 사용으로 필수
+
+## 🔧 개발 정보
+
+- 언어: Python 3.13
+- GUI 프레임워크: customtkinter (데스크톱)
+- 웹 프레임워크: Flask (웹)
+- 번역 라이브러리: deep-translator
+- 멀티스레딩: 번역 중 UI 프리징 방지
+
+## 📝 라이선스
+
+이 프로젝트는 MIT 라이선스로 배포됩니다.
+
+## 🤝 기여
+
+버그 리포트, 기능 제안, Pull Request는 언제든 환영합니다!
+
+## 📧 연락
+
+문제가 있으시면 GitHub Issues를 통해 연락 주세요.
+
+---
+**마지막 업데이트**: 2026년 4월 28일
+**개발자**: 박 장 호
 
 1. **원문 입력**: 상단 입력 창에 번역할 텍스트를 입력합니다.
 2. **언어 선택**: 
